@@ -20,7 +20,7 @@ public class KadaiFirstController {
         LocalDate inputDate = LocalDate.parse(val1, DateTimeFormatter.BASIC_ISO_DATE);
 
         //inputDateを曜日に変換;
-        return inputDate.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.US);
+        return "実行結果：" + inputDate.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.US);
     }
 
     //足し算
@@ -28,7 +28,7 @@ public class KadaiFirstController {
     public String calcPlus(@PathVariable int val1, @PathVariable int val2) {
         int res = 0;
         res = val1 + val2;
-        return "計算結果：" + res;
+        return "実行結果：" + res;
     }
 
     //引き算
@@ -36,7 +36,7 @@ public class KadaiFirstController {
     public String calcMinus(@PathVariable int val1, @PathVariable int val2) {
         int res = 0;
         res = val1 - val2;
-        return "計算結果：" + res;
+        return "実行結果：" + res;
     }
 
     //掛け算
@@ -44,7 +44,7 @@ public class KadaiFirstController {
     public String calcTimes(@PathVariable int val1, @PathVariable int val2) {
         int res = 0;
         res = val1 * val2;
-        return "計算結果：" + res;
+        return "実行結果：" + res;
     }
 
     //割り算
@@ -52,6 +52,6 @@ public class KadaiFirstController {
     public String calcDivide(@PathVariable int val1, @PathVariable int val2) {
         int res = 0;
         res = val1 / val2;
-        return "計算結果：" + res;
+        return "実行結果：" + res;
     }
 }
